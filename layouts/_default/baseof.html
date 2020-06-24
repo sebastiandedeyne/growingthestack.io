@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    {{ if not (eq .Title $.Site.Title) }}
+      <title>{{ .Title }} — {{ $.Site.Title }}</title>
+    {{ else }}
+      <title>{{ $.Site.Title }}</title>
+    {{ end }}
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Growing the Stack" />
+
+    {{ with resources.Get "css/reset.css" | resources.Minify }}
+      <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+    {{ with resources.Get "css/site.css" | resources.Minify }}
+      <style>{{ .Content | safeCSS }}</style>
+    {{ end }}
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    {{ block "meta" . }}
+      <meta name="description" content="Programming, product, design, and everything in between" />
+      <meta property="og:title" content="{{ .Title }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:url" content="{{ .Permalink }}" />
+      <meta property="og:image" content="" />
+      <meta property="og:description" content="Programming, product, design, and everything in between" />
+    {{ end }}
+  </head>
+
+  <body>
+    <div class="layout">
+      <header class="header">
+        <a href="/">
+          <img src="/logotype.svg" class="header__logotype" alt="">
+        </a>
+        <nav class="header__nav">
+          <p class="header__nav__intro">
+            Programming, product, design, <br>
+            and everything in between.
+          </p>
+          <ul class="header__nav__links">
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">RSS</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="layout__main">
+        {{ block "main" . }}{{ end }}
+      </main>
+      <footer class="layout__footer footer markup">
+        © 2020 Growing the Stack, by <a href="https://sebastiandedeyne.com" target="_blank" rel="noreferer">Sebastian De Deyne</a>
+      </footer>
+    </div>
+  </body>
+</html>

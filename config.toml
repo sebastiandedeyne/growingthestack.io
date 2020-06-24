@@ -1,0 +1,6 @@
+baseURL = "https://growingthestack.io/"
+languageCode = "en-us"
+title = "Growing the Stack"
+
+[permalinks]
+  links = "/:year/:month/:title/"
