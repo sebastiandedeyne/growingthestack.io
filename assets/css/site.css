@@ -229,3 +229,23 @@ a {
   border: 1px solid #575757;
   transform: rotate(-1deg);
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.pagination li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.pagination li:not(.active):not(.disabled) a:not([rel]) {
+  text-decoration: underline;
+}
+
+.pagination li.disabled {
+  color: var(--gray-lightest);
+  pointer-events: none;
+}
