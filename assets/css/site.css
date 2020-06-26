@@ -117,13 +117,14 @@ a {
   }
 }
 
-.posts__group__key {
+.posts__group__date {
   color: var(--gray-light);
   font-size: 0.875rem;
+  margin-top: 0.175rem;
 }
 
 @media (min-width: 640px) {
-  .posts__group__key {
+  .posts__group__date {
     width: 25%;
   }
 }

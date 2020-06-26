@@ -4,7 +4,7 @@
   {{ range $paginator.Pages.GroupByDate "1 January 2006" }}
     <ol class="posts">
       <li class="posts__group">
-        <aside class="posts__group__key">
+        <aside class="posts__group__date">
           {{ .Key }}
         </aside>
         <ol class="posts__group__posts">
