@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Growing the Stack" />
+    <link rel="alternate" type="application/rss+xml" href="/issues/index.xml" title="Growing the Stack" />
 
     {{ with resources.Get "css/reset.css" | resources.Minify }}
       <style>{{ .Content | safeCSS }}</style>
@@ -49,9 +49,9 @@
             and everything in between.
           </p>
           <ul class="header__nav__links">
-            <li><a href="/newsletter">Newsletter</a></li>
+            <li><a href="/issues">Archive</a></li>
             <li><a href="https://twitter.com/growingthestack">Twitter</a></li>
-            <li><a href="/index.xml">RSS</a></li>
+            <li><a href="/issues/index.xml">RSS</a></li>
           </ul>
         </nav>
       </header>

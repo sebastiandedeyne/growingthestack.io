@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <section class="home">
+    <div class="markup">
+      <p><strong><em>Growing the Stack</em></strong> is a biweekly—as in, once every two weeks—newsletter about programming, design, and other related topics.</p>
+      <p>The newsletter isn't tied to any programming language or ecosystem, and it's not meant keep you up to date with all the new & shiny tools out there.</p>
+      <p>It tries to bundle content that *inspires*. Content that triggers you to think about new concepts which might help you solve your next big project's problems.</p>
+      <p>Quantity over quality. Editions will be sent *every two weeks* on Tuesday. Each will contain *three links* about programming, design, the web, the workplace, ethics, productivity, or any other relatable subject.</p>
+    </div>
+    <div class="subscribe">
+      <form
+        method="POST"
+        action="https://mailcoach.growingthestack.io/subscribe/ee4e576c-ac83-4827-86b0-bcdc49d522a9"
+      >
+        <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required="">
+        <input type="submit" value="Subscribe">
+      </form>
+      <p class="subscribe__remark">
+        Your email address will only ever be used for this newsletter.
+        If you prefer, you can subscribe via <a href="/issues/index.xml">RSS</a> instead.
+      </p>
+    </div>
+  </section>
+  {{ with index (where $.Site.RegularPages "Type" "issues") 0 }}
+    <article class="issue">
+      <aside class="issue__date">
+        <a href="{{ .Permalink }}">
+          Latest issue
+        </a>
+      </aside>
+      <section class="issue__content">
+        <header>
+          <aside class="issue__number">
+            <a href="{{ .Permalink }}">
+              Growing the Stack #{{ .File.BaseFileName }}
+            </a>
+          </aside>
+          <h1 class="issue__title">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h1>
+        </header>
+      </section>
+    </article>
+  {{ end }}
+{{ end }}

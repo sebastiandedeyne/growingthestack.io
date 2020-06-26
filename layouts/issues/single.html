@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <article class="issue">
+    <aside class="issue__date">
+      <a href="{{ .Permalink }}">
+        {{ .Date | dateFormat "2 January 2006" }}
+      </a>
+    </aside>
+    <section class="issue__content">
+      <header>
+        <aside class="issue__number">
+          <a href="{{ .Permalink }}">
+            Growing the Stack #{{ .File.BaseFileName }}
+          </a>
+        </aside>
+        <h1 class="issue__title">
+          <a href="{{ .Permalink }}">
+            {{ .Title }}
+          </a>
+        </h1>
+      </header>
+      <div class="markup">
+        {{ .Content }}
+      </div>
+    </section>
+  </article>
+{{ end }}
