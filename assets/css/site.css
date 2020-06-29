@@ -159,11 +159,15 @@ a {
 }
 
 .markup {
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .markup > *:not(:first-child) {
   margin-top: 1.5rem;
+}
+
+.markup blockquote > *:not(:first-child) {
+  margin-top: 1rem;
 }
 
 .markup h2 {
@@ -215,16 +219,9 @@ a {
   transform: rotate(-1deg);
 }
 
-.markup label {
-  color: var(--gray-light);
-  font-size: 0.85rem;
-}
-
-.markup button {
-  appearance: none;
-  border: none;
-  background-color: var(--gray-darkest);
-  color: white;
+.markup ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
 }
 
 .subscribe {
