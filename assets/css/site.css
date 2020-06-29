@@ -118,6 +118,16 @@ a {
   }
 }
 
+.home__issue {
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .home__issue {
+    margin-top: 6rem;
+  }
+}
+
 .issue {
   margin-bottom: 3rem;
 }
@@ -225,14 +235,8 @@ a {
 }
 
 .subscribe {
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
   margin-top: 2.25rem;
-}
-
-@media (min-width: 640px) {
-  .subscribe {
-    margin-bottom: 6rem;
-  }
 }
 
 .subscribe form {
@@ -253,10 +257,6 @@ a {
   padding: 0.5rem 1rem;
   font: inherit;
   border-radius: 0;
-}
-
-.subscribe input:focus {
-  outline: 2px solid var(--gray-darkest);
 }
 
 .subscribe input[type="email"] {

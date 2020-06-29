@@ -3,8 +3,6 @@
     <div class="markup">
       <p><strong><em>Growing the Stack</em></strong> is a biweekly—as in, once every two weeks—newsletter about programming, design, and other related topics.</p>
       <p>The newsletter isn't tied to any programming language or ecosystem, and it's not meant keep you up to date with all the new & shiny tools out there.</p>
-      <p>It tries to bundle content that <em>inspires</em>. Content that triggers you to think about new concepts which might help you solve your next big project's problems.</p>
-      <p>Quantity over quality. Editions will be sent <em>every two weeks</em> on Tuesday. Each will contain links about programming, design, the web, the workplace, ethics, productivity, or any other relatable subject.</p>
     </div>
     <div class="subscribe">
       <form
@@ -19,9 +17,13 @@
         If you prefer, you can subscribe via <a href="/issues/index.xml">RSS</a> instead.
       </p>
     </div>
+    <div class="markup">
+      <p>It tries to bundle content that <em>inspires</em>. Content that triggers you to think about new concepts which might help you solve your next big project's problems.</p>
+      <p>Quantity over quality. Editions will be sent <em>every two weeks</em> on Tuesday. Each will contain links about programming, design, the web, the workplace, ethics, productivity, or any other relatable subject.</p>
+    </div>
   </section>
   {{ with index (where $.Site.RegularPages "Type" "issues") 0 }}
-    <article class="issue">
+    <article class="home__issue issue">
       <aside class="issue__date">
         <a href="{{ .Permalink }}">
           Latest issue
