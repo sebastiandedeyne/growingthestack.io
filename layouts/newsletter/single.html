@@ -1,4 +1,4 @@
-{{ with (index (where $.Site.Pages "File.Path" (printf "issues/%d.md" .Params.issue)) 0) }}
+{{ with (index (where $.Site.Pages "Params.issue" .Params.issue) 0) }}
   <!DOCTYPE html>
   <html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
@@ -13,7 +13,7 @@
         td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
       </style>
     <![endif]-->
-      <title>Growing the Stack #{{ .Params.issue }}</title>
+      <title>Growing the Stack #{{ .Params.issue }}: {{ .Title }}</title>
       <link href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700" rel="stylesheet" media="screen">
       <style>
         @media (max-width: 600px) {
