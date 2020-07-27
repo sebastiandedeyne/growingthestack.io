@@ -197,6 +197,10 @@ a {
   text-decoration: underline;
 }
 
+.markup img {
+  max-width: 100%;
+}
+
 .markup em {
   font-style: italic;
 }
